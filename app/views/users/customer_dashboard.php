@@ -6,7 +6,7 @@ if (session_status() === PHP_SESSION_NONE) {
 $customer = $_SESSION["user"] ?? null;
 
 if (!$customer || ($_SESSION["role"] ?? null) !== "customer") {
-    header("Location: /Test_project/public/login");
+    header("Location: /loyalty-program/public/login");
     exit;
 }
 ?>
@@ -77,12 +77,12 @@ if (!$customer || ($_SESSION["role"] ?? null) !== "customer") {
         <h3>Customer Panel</h3>
         <hr style="border-color:#cfd9e6">
         
-        <a href="/Test_project/public/customer/dashboard">🏠 Dashboard</a>
-        <a href="/Test_project/public/offers">🎁 View All Offers</a>
-        <a href="/Test_project/public/customer/redeemed-offers">📄 My Redeemed Offers</a>
-        <a href="/Test_project/public/subscription/join">💳 subscriptions</a>
-        <a href="/Test_project/public/customer/profile">⚙ Edit Profile</a>
-        <a href="/Test_project/public">🚪 Back to Home</a>
+        <a href="/loyalty-program/public/customer/dashboard">🏠 Dashboard</a>
+        <a href="/loyalty-program/public/offers">🎁 View All Offers</a>
+        <a href="/loyalty-program/public/customer/redeemed-offers">📄 My Redeemed Offers</a>
+        <a href="/loyalty-program/public/subscription/join">💳 subscriptions</a>
+        <a href="/loyalty-program/public/customer/profile">⚙ Edit Profile</a>
+        <a href="/loyalty-program/public">🚪 Back to Home</a>
     </div>
 
     <div class="col-9 content">

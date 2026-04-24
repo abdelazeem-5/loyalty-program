@@ -81,13 +81,13 @@ $merchant = $_SESSION["user"];
         <h3>Merchant Panel</h3>
         <hr style="border-color:#cfd9e6">
 
-        <a href="/Test_project/public/merchant/dashboard">🏠 Dashboard</a>
-        <a href="/Test_project/public/merchant/profile">📝 Edit Profile</a>
-        <a href="/Test_project/public/merchant/my-offers">📦 My Offers</a>
-        <a href="/Test_project/public/merchant/offers/create">➕ Add Offers</a>
-        <a href="/Test_project/public/merchant/offers/edit-list">✏ Update Offers</a>
-        <a href="/Test_project/public/merchant/offers/delete-list">🗑 Delete Offers</a>
-        <a href="/Test_project/public">🚪 Back to Home</a>
+        <a href="/loyalty-program/public/merchant/dashboard">🏠 Dashboard</a>
+        <a href="/loyalty-program/public/merchant/profile">📝 Edit Profile</a>
+        <a href="/loyalty-program/public/merchant/my-offers">📦 My Offers</a>
+        <a href="/loyalty-program/public/merchant/offers/create">➕ Add Offers</a>
+        <a href="/loyalty-program/public/merchant/offers/edit-list">✏ Update Offers</a>
+        <a href="/loyalty-program/public/merchant/offers/delete-list">🗑 Delete Offers</a>
+        <a href="/loyalty-program/public">🚪 Back to Home</a>
 
     </div>
 

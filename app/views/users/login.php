@@ -178,7 +178,7 @@ input, textarea, select, button {
 
 <body>
 
-<a class="back-btn" href="/Test_project/public/">← Back to Home</a>
+<a class="back-btn" href="/loyalty-program/public/">← Back to Home</a>
 
 <div class="brand">
     <h1>Login</h1>
@@ -191,7 +191,7 @@ input, textarea, select, button {
     </div>
 <?php endif; ?>
 
-<form action="/Test_project/public/login" method="POST">
+<form action="/loyalty-program/public/login" method="POST">
 
     <label>Email</label>
     <input type="email" name="email" placeholder="Enter your email" required>
@@ -204,7 +204,7 @@ input, textarea, select, button {
 
 <p>
     Don,t have an account?
-    <a href="/Test_project/public/select-user-type">Create an account</a>
+    <a href="/loyalty-program/public/select-user-type">Create an account</a>
 </p>
 
 </body>

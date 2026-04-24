@@ -142,12 +142,12 @@ input, textarea, select, button {
 
 <body>
 
-<a href="/Test_project/public/select-user-type" class="back-btn">← Back</a>
+<a href="/loyalty-program/public/select-user-type" class="back-btn">← Back</a>
 
 <h2>Customer Registration</h2>
 <p class="subtitle">Create your customer account to start earning rewards</p>
 
-<form action="/Test_project/public/register-customer" method="POST">
+<form action="/loyalty-program/public/register-customer" method="POST">
     <input type="text" name="name" placeholder="Full Name" required>
     <input type="email" name="email" placeholder="Email Address" required>
     <input type="password" name="password" placeholder="Create Password" required>

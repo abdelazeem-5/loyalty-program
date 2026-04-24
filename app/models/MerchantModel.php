@@ -4,12 +4,12 @@ require_once ROOT_PATH . "/app/config/database.php";
 
 class MerchantModel
 {
-    private $conn;
+    private $connection;
 
     public function __construct()
     {
         $db = new Database();
-        $this->conn = $db->connect();
+        $this->connection = $db->connect();
     }
 
     public function calculatePoints($amount)
@@ -22,7 +22,7 @@ class MerchantModel
         $query = "UPDATE customers
             SET points = points + :points
             WHERE email = :email";
-        $stmt = $this->conn->prepare($query);
+        $stmt = $this->connection->prepare($query);
 
         return $stmt->execute([
             "points" => $points,

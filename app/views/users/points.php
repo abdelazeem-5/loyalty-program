@@ -86,7 +86,7 @@
 </head>
 <body>
 
-<a class="back-btn" href="/Test_project/public/">← Back to Home</a>
+<a class="back-btn" href="/loyalty-program/public/">← Back to Home</a>
 
 <div class="points-box">
     <h1>My Points</h1>

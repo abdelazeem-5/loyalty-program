@@ -127,7 +127,7 @@ h2 {
 <body>
 
 <div class="back-top">
-    <a href="/Test_project/public/customer/dashboard" class="btn-blue">← Customer Panel</a>
+    <a href="/loyalty-program/public/customer/dashboard" class="btn-blue">← Customer Panel</a>
 </div>
 
 <h2>All Available Offers</h2>
@@ -144,11 +144,11 @@ h2 {
 
                 <?php if ($isCustomer): ?>
                     <a class="redeem-btn"
-                       href="/Test_project/public/customer/redeem-offer?id=<?= $offer['offer_id'] ?>">
+                       href="/loyalty-program/public/customer/redeem-offer?id=<?= $offer['offer_id'] ?>">
                         Use Offer
                     </a>
                 <?php else: ?>
-                    <a class="redeem-btn" href="/Test_project/public/login">
+                    <a class="redeem-btn" href="/loyalty-program/public/login">
                         Login to Use Offer
                     </a>
                 <?php endif; ?>
@@ -158,7 +158,7 @@ h2 {
 </div>
 
 <div class="back-bottom">
-        <a href="/Test_project/public/" class="btn-blue">← Back to Home</a>
+        <a href="/loyalty-program/public/" class="btn-blue">← Back to Home</a>
 
 </div>
 

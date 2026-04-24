@@ -2,7 +2,7 @@
 if (!isset($_SESSION)) session_start();
 
 if (!isset($_SESSION['user']) || ($_SESSION['role'] ?? null) !== 'merchant') {
-    header("Location: /Test_project/public/login");
+    header("Location: /loyalty-program/public/login");
     exit;
 }
 
@@ -129,13 +129,13 @@ $merchant = $_SESSION['user'];
 </head>
 <body>
 
-<a class="back-top-btn" href="/Test_project/public/merchant/dashboard">← Merchant Panel</a>
+<a class="back-top-btn" href="/loyalty-program/public/merchant/dashboard">← Merchant Panel</a>
 
 <div class="profile-box">
 
     <h2>Edit Profile</h2>
 
-    <form action="/Test_project/public/merchant/profile" method="POST">
+    <form action="/loyalty-program/public/merchant/profile" method="POST">
 
         <label>Name</label>
         <input type="text" name="name"

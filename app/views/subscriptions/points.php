@@ -86,7 +86,7 @@
     <h1>Points Based Program</h1>
     <p>Every purchase gives you points that you can redeem later for exclusive offers and rewards.</p>
 
-    <a class="btn" href="/Test_project/public/">Return Home</a>
+    <a class="btn" href="/loyalty-program/public/">Return Home</a>
 </div>
 
 </body>

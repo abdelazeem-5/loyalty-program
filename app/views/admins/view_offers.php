@@ -42,7 +42,7 @@
                     <td><?= $offer['created_at'] ?></td>
 
                     <td>
-                        <a href="/Test_project/public/admins/delete-offer?id=<?= $offer['offer_id'] ?>"
+                        <a href="/loyalty-program/public/admins/delete-offer?id=<?= $offer['offer_id'] ?>"
                            class="btn btn-danger btn-sm"
                            onclick="return confirm('Are you sure you want to delete this offer?');">
                             Delete
@@ -55,7 +55,7 @@
 
     <?php endif; ?>
 
-    <a href="/Test_project/public/admins/dashboard" class="btn btn-secondary mt-3">← Back</a>
+    <a href="/loyalty-program/public/admins/dashboard" class="btn btn-secondary mt-3">← Back</a>
 
 </div>
 

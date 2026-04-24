@@ -110,7 +110,7 @@
 
 <body>
 
-<a class="back-btn" href="/Test_project/public/customer/dashboard">← Customer Panel</a>
+<a class="back-btn" href="/loyalty-program/public/customer/dashboard">← Customer Panel</a>
 
 <h2>Your Redeemed Offers</h2>
 

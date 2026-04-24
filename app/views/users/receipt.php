@@ -108,7 +108,7 @@ h2 {
 </head>
 <body>
 
-<a class="back-btn" href="/Test_project/public/customer/dashboard">← Back</a>
+<a class="back-btn" href="/loyalty-program/public/customer/dashboard">← Back</a>
 
 <div class="receipt">
     <h2>Offer Details</h2>
@@ -120,7 +120,7 @@ h2 {
     <hr>
     <p>📍 Please visit the nearest branch to apply the discount.</p>
 
-    <form action="/Test_project/public/customer/confirm-redeem" method="POST">
+    <form action="/loyalty-program/public/customer/confirm-redeem" method="POST">
         <input type="hidden" name="offer_id" value="<?= $offer['offer_id'] ?>">
         <button type="submit" class="btn-confirm">Confirm Offer</button>
     </form>

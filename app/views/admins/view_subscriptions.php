@@ -33,7 +33,7 @@
                 <td><?= ucfirst(str_replace("_", " ", $s['program_type'])) ?></td>
 
                 <td>
-                    <a href="/Test_project/public/admins/delete_subscription?id=<?= $s['subscription_id'] ?>"
+                    <a href="/loyalty-program/public/admins/delete_subscription?id=<?= $s['subscription_id'] ?>"
                        class="btn btn-danger btn-sm"
                        onclick="return confirm('Delete this subscription?')">
                        Delete
@@ -45,7 +45,7 @@
 
     </table>
 
-    <a href="/Test_project/public/admins/dashboard" class="btn btn-secondary mt-3">← Back</a>
+    <a href="/loyalty-program/public/admins/dashboard" class="btn btn-secondary mt-3">← Back</a>
 </div>
 
 </body>

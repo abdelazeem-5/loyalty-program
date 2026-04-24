@@ -46,7 +46,7 @@ class MerchantController
             $success = $model->createOffer($_SESSION['user']['merchant_id'], $title, $description, $discount);
 
             if ($success) {
-                header("Location: /Test_project/public/merchant/offers");
+                header("Location: /loyalty-program/public/merchant/offers");
                 exit;
             }
 
@@ -91,7 +91,7 @@ class MerchantController
             $success = $model->updateOffer($id, $title, $description, $discount);
 
             if ($success) {
-                header("Location: /Test_project/public/merchant/offers/edit-list");
+                header("Location: /loyalty-program/public/merchant/offers/edit-list");
                 exit;
             }
 
@@ -118,7 +118,7 @@ class MerchantController
 
         require ROOT_PATH . "/app/views/merchants/delete_offers.php";
     }
-
+    
     public function deleteOfferById($id)
     {
         if (!isset($_SESSION['user']) || $_SESSION['role'] !== 'merchant') {
@@ -139,7 +139,7 @@ class MerchantController
 public function profile()
 {
     if (!isset($_SESSION['user']) || $_SESSION['role'] !== 'merchant') {
-        header("Location: /Test_project/public/login");
+        header("Location: /loyalty-program/public/login");
         exit;
     }
 
@@ -164,7 +164,7 @@ public function profile()
         $_SESSION['user']['name']  = $name;
         $_SESSION['user']['email'] = $email;
 
-        header("Location: /Test_project/public/merchant/profile");
+        header("Location: /loyalty-program/public/merchant/profile");
         exit;
     }
 
@@ -175,7 +175,7 @@ public function profile()
 public function myOffers()
 {
     if (!isset($_SESSION['user']) || ($_SESSION['role'] ?? null) !== 'merchant') {
-        header("Location: /Test_project/public/login");
+        header("Location: /loyalty-program/public/login");
         exit;
     }
 

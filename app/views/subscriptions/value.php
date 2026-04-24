@@ -88,7 +88,7 @@
         Thank you for contributing to helping others 💙.
     </p>
 
-    <a class="btn" href="/Test_project/public/">Return Home</a>
+    <a class="btn" href="/loyalty-program/public/">Return Home</a>
 </div>
 
 </body>

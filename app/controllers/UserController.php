@@ -20,9 +20,9 @@ class UserController
             $type = $_POST["user_type"] ?? "customer";
 
             if ($type === "merchant") {
-                header("Location: /Test_project/public/register-merchant");
+                header("Location: /loyalty-program/public/register-merchant");
             } else {
-                header("Location: /Test_project/public/register-customer");
+                header("Location: /loyalty-program/public/register-customer");
             }
             exit;
         }
@@ -50,7 +50,7 @@ class UserController
 
             if ($test) {
              
-                   header("Location: /Test_project/public/customer/dashboard");
+                   header("Location: /loyalty-program/public/customer/dashboard");
                    
 
                 exit;
@@ -83,7 +83,7 @@ class UserController
             $test    = $model->register($name, $email, $password);
 
             if ($test) {
-                header("Location: /Test_project/public/login");
+                header("Location: /loyalty-program/public/login");
 
                 
                 exit;
@@ -117,7 +117,7 @@ class UserController
                 ];
                 $_SESSION["role"] = "customer";
 
-                header("Location: /Test_project/public/customer/dashboard");
+                header("Location: /loyalty-program/public/customer/dashboard");
                 exit;
             }
 
@@ -132,7 +132,7 @@ class UserController
                 ];
                 $_SESSION["role"] = "merchant";
 
-                header("Location: /Test_project/public/merchant/dashboard");
+                header("Location: /loyalty-program/public/merchant/dashboard");
                 exit;
             }
 
@@ -148,7 +148,7 @@ class UserController
     public function logout()
     {
         session_destroy();
-        header("Location: /Test_project/public/");
+        header("Location: /loyalty-program/public/");
         exit;
     }
 
@@ -156,7 +156,7 @@ class UserController
     public function redeemOffer()
     {
         if (!isset($_SESSION["role"]) || $_SESSION["role"] !== "customer") {
-            header("Location: /Test_project/public/login");
+            header("Location: /loyalty-program/public/login");
             exit;
         }
 
@@ -198,7 +198,7 @@ class UserController
     public function confirmRedeem()
 {
     if (!isset($_SESSION["user"]) || $_SESSION["role"] !== "customer") {
-        header("Location: /Test_project/public/login");
+        header("Location: /loyalty-program/public/login");
         exit;
     }
 
@@ -224,7 +224,7 @@ class UserController
         $_SESSION["redeem_error"] = "Failed to save offer.";
     }
 
-    header("Location: /Test_project/public/customer/redeem-offer?id=" . $offerId);
+    header("Location: /loyalty-program/public/customer/redeem-offer?id=" . $offerId);
     exit;
 }
 
@@ -232,7 +232,7 @@ class UserController
     public function customerDashboard()
     {
         if (!isset($_SESSION["user"]) || $_SESSION["role"] !== "customer") {
-            header("Location: /Test_project/public/login");
+            header("Location: /loyalty-program/public/login");
             exit;
         }
 
@@ -243,7 +243,7 @@ class UserController
     public function myredeemedOffers()
     {
         if (!isset($_SESSION["user"]) || $_SESSION["role"] !== "customer") {
-            header("Location: /Test_project/public/login");
+            header("Location: /loyalty-program/public/login");
             exit;
         }
 
@@ -268,7 +268,7 @@ class UserController
     public function customerProfile()
     {
         if (!isset($_SESSION["user"]) || $_SESSION["role"] !== "customer") {
-            header("Location: /Test_project/public/login");
+            header("Location: /loyalty-program/public/login");
             exit;
         }
 
@@ -316,7 +316,7 @@ class UserController
  public function customerPoints()
 {
     if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'customer') {
-        header("Location: /Test_project/public/login");
+        header("Location: /loyalty-program/public/login");
         exit;
     }
 

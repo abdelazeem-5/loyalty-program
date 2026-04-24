@@ -2,7 +2,7 @@
 if (!isset($_SESSION)) session_start();
 
 if (!isset($_SESSION['user']) || ($_SESSION['role'] ?? null) !== 'merchant') {
-    header("Location: /Test_project/public/login");
+    header("Location: /loyalty-program/public/login");
     exit;
 }
 
@@ -100,7 +100,7 @@ $offers = $offers ?? [];
 
 <body>
 
-<a class="back-top-btn" href="/Test_project/public/merchant/dashboard">← Merchant Panel</a>
+<a class="back-top-btn" href="/loyalty-program/public/merchant/dashboard">← Merchant Panel</a>
 
 <h2>My Offers</h2>
 

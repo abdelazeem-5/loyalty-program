@@ -102,7 +102,7 @@
 </head>
 <body>
 
-<a class="back-top-btn" href="/Test_project/public/merchant/dashboard">← Merchant Panel</a>
+<a class="back-top-btn" href="/loyalty-program/public/merchant/dashboard">← Merchant Panel</a>
 
 <h2>Delete Offers</h2>
 
@@ -128,7 +128,7 @@
             </div>
 
             <a class="delete-btn"
-               href="/Test_project/public/merchant/offers/delete?id=<?= $offer['offer_id'] ?>">
+               href="/loyalty-program/public/merchant/offers/delete?id=<?= $offer['offer_id'] ?>">
                Delete
             </a>
 

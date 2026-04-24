@@ -30,7 +30,7 @@
                 <td><?= htmlspecialchars($m['email']) ?></td>
 
                 <td>
-                    <a href="/Test_project/public/admins/delete_merchant?id=<?= $m['merchant_id'] ?>"
+                    <a href="/loyalty-program/public/admins/delete_merchant?id=<?= $m['merchant_id'] ?>"
                        class="btn btn-danger btn-sm"
                        onclick="return confirm('Delete this merchant?')">
                        Delete
@@ -41,7 +41,7 @@
         </tbody>
     </table>
 
-    <a href="/Test_project/public/admins/dashboard" class="btn btn-secondary mt-3">← Back</a>
+    <a href="/loyalty-program/public/admins/dashboard" class="btn btn-secondary mt-3">← Back</a>
 </div>
 
 </body>

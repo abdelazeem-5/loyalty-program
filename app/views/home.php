@@ -10,7 +10,7 @@ if (session_status() === PHP_SESSION_NONE) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="/Test_project/public/css/stylee.css">
+  <link rel="stylesheet" href="/loyalty-program/public/css/stylee.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <title>Loyalty Program</title>
@@ -22,8 +22,8 @@ if (session_status() === PHP_SESSION_NONE) {
   <div class="header-container">
     <div class="header-col">
       <div class="logo-container">
-        <a href="/Test_project/public/">
-          <img src="/Test_project/public/images/logoo2.jpeg" alt="logo" class="logo">
+        <a href="/loyalty-program/public/">
+          <img src="/loyalty-program/public/images/logoo2.jpeg" alt="logo" class="logo">
         </a>
       </div>
     </div>
@@ -33,10 +33,10 @@ if (session_status() === PHP_SESSION_NONE) {
           <ul class="nav-list-container">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="/Test_project/public/customer/points">EarnPoints</a></li>
-            <li><a href="/Test_project/public/customer/redeemed-offers">Redeem</a></li>
-            <li><a href="/Test_project/public/offers">Offers</a></li>
-            <li><a href="/Test_project/public/subscription/join">subscriptions</a></li>
+            <li><a href="/loyalty-program/public/customer/points">EarnPoints</a></li>
+            <li><a href="/loyalty-program/public/customer/redeemed-offers">Redeem</a></li>
+            <li><a href="/loyalty-program/public/offers">Offers</a></li>
+            <li><a href="/loyalty-program/public/subscription/join">subscriptions</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
 
@@ -60,28 +60,28 @@ if (session_status() === PHP_SESSION_NONE) {
 
     <?php if ($_SESSION['role'] === 'customer'): ?>
         <li>
-            <a href="/Test_project/public/customer/dashboard" class="btn">
+            <a href="/loyalty-program/public/customer/dashboard" class="btn">
                 Dashboard
             </a>
         </li>
 
     <?php elseif ($_SESSION['role'] === 'merchant'): ?>
         <li>
-            <a href="/Test_project/public/merchant/dashboard" class="btn">
+            <a href="/loyalty-program/public/merchant/dashboard" class="btn">
                 Dashboard
             </a>
         </li>
 
     <?php elseif ($_SESSION['role'] === 'admin'): ?>
         <li>
-            <a href="/Test_project/public/admin/dashboard" class="btn">
+            <a href="/loyalty-program/public/admin/dashboard" class="btn">
                 Admin Panel
             </a>
         </li>
     <?php endif; ?>
 
     <li>
-        <a href="/Test_project/public/logout" class="btn">
+        <a href="/loyalty-program/public/logout" class="btn">
             Logout
         </a>
     </li>
@@ -89,10 +89,10 @@ if (session_status() === PHP_SESSION_NONE) {
 <?php else: ?>
 
     <li>
-        <a href="/Test_project/public/login" class="btn">Login</a>
+        <a href="/loyalty-program/public/login" class="btn">Login</a>
     </li>
     <li>
-        <a href="/Test_project/public/select-user-type" class="btn">Register</a>
+        <a href="/loyalty-program/public/select-user-type" class="btn">Register</a>
     </li>
 
 <?php endif; ?>
@@ -159,27 +159,27 @@ if (session_status() === PHP_SESSION_NONE) {
 
     <div class="category-grid">
       <div class="category-card">
-        <img src="/Test_project/public/images/mall.jpeg" alt="Shopping Malls">
+        <img src="/loyalty-program/public/images/mall.jpeg" alt="Shopping Malls">
         <h3>Shopping Malls</h3>
       </div>
 
       <div class="category-card">
-        <img src="/Test_project/public/images/restaurant.jpeg" alt="Restaurants">
+        <img src="/loyalty-program/public/images/restaurant.jpeg" alt="Restaurants">
         <h3>Restaurants</h3>
       </div>
 
       <div class="category-card">
-        <img src="/Test_project/public/images/cinema.jpeg" alt="Cinemas">
+        <img src="/loyalty-program/public/images/cinema.jpeg" alt="Cinemas">
         <h3>Cinemas</h3>
       </div>
 
       <div class="category-card">
-        <img src="/Test_project/public/images/Entertainment.jpeg" alt="Entertainment">
+        <img src="/loyalty-program/public/images/Entertainment.jpeg" alt="Entertainment">
         <h3>Entertainments</h3>
       </div>
 
       <div class="category-card">
-        <img src="/Test_project/public/images/hotel.jpeg" alt="Hotels">
+        <img src="/loyalty-program/public/images/hotel.jpeg" alt="Hotels">
         <h3>Hotels</h3>
       </div>
     </div>
@@ -216,8 +216,8 @@ if (session_status() === PHP_SESSION_NONE) {
     <div class="footer-section">
       <h4>Quick Links</h4>
       <ul>
-        <li><a href="/Test_project/public/">Home</a></li>
-        <li><a href="/Test_project/public/offers">Offers</a></li>
+        <li><a href="/loyalty-program/public/">Home</a></li>
+        <li><a href="/loyalty-program/public/offers">Offers</a></li>
       </ul>
     </div>
 

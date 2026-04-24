@@ -14,23 +14,23 @@ class SubscriptionModel
 
 
     public function createSubscription($customer_id, $tier = 'silver', $program_type = 'points_based')
-{
-    $deleteQuery = "DELETE FROM {$this->table} WHERE customer_id = :customer_id";
-    $deleteStmt = $this->connection->prepare($deleteQuery);
-    $deleteStmt->execute([":customer_id" => $customer_id]);
+    {
+        $deleteQuery = "DELETE FROM {$this->table} WHERE customer_id = :customer_id";
+        $deleteStmt = $this->connection->prepare($deleteQuery);
+        $deleteStmt->execute([":customer_id" => $customer_id]);
 
-    $query = "INSERT INTO {$this->table} 
-            (customer_id, tier, program_type, status)
-            VALUES (:customer_id, :tier, :program_type, 'active')";
+        $query = "INSERT INTO {$this->table} 
+                (customer_id, tier, program_type, status)
+                VALUES (:customer_id, :tier, :program_type, 'active')";
 
-    $stmt = $this->connection->prepare($query);
+        $stmt = $this->connection->prepare($query);
 
-    return $stmt->execute([
-        ":customer_id" => $customer_id,
-        ":tier" => $tier,
-        ":program_type" => $program_type
-    ]);
-}
+        return $stmt->execute([
+            ":customer_id" => $customer_id,
+            ":tier" => $tier,
+            ":program_type" => $program_type
+        ]);
+    }
 
 
     public function getSubscriptionsByCustomer(int $customer_id): array
@@ -43,35 +43,17 @@ class SubscriptionModel
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function updateSubscription(int $subscription_id, ?string $tier = null, ?string $program_type = null): bool
+
+    public function cancelSubscription(int $subscription_id): bool
     {
-        $updates = [];
-        $params = [":id" => $subscription_id];
-
-        if ($tier !== null) {
-            $updates[] = "tier = :tier";
-            $params[":tier"] = $tier;
-        }
-
-        if ($program_type !== null) {
-            $updates[] = "program_type = :program_type";
-            $params[":program_type"] = $program_type;
-        }
-
-        if (empty($updates)) return false;
-
-        $updateFields = implode(", ", $updates);
-
         $query = "UPDATE {$this->table} 
-                  SET $updateFields 
+                  SET status = 'cancelled' 
                   WHERE subscription_id = :id";
-
         $stmt = $this->connection->prepare($query);
-        return $stmt->execute($params);
+        return $stmt->execute([":id" => $subscription_id]);
     }
 
-
-    public function getSubscriptionById($subscription_id)
+    public function getSubscriptionById(int $subscription_id): array|false
     {
         $query = "SELECT * FROM {$this->table} 
                   WHERE subscription_id = :id";
@@ -107,9 +89,6 @@ public function deleteSubscription($id)
 
     return $stmt->execute([":id" => $id]);
 }
-
-
-
 
 public function deleteByCustomer($customerId)
 {

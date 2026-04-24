@@ -150,13 +150,13 @@
 <body>
 
 <div class="back-top">
-    <a href="/Test_project/public/" class="btn-back">← Back to Home</a>
+    <a href="/loyalty-program/public/" class="btn-back">← Back to Home</a>
 </div>
 
 <h2>Join Subscription</h2>
 <p class="info">Choose your tier and program type below</p>
 
-<form action="/Test_project/public/subscription/join" method="POST">
+<form action="/loyalty-program/public/subscription/join" method="POST">
 
     <label>Select Your Tier:</label>
     <select name="tier">

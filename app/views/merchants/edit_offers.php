@@ -162,7 +162,7 @@
 
 <body>
 
-<a class="back-top-btn" href="/Test_project/public/merchant/dashboard">← Merchant Panel</a>
+<a class="back-top-btn" href="/loyalty-program/public/merchant/dashboard">← Merchant Panel</a>
 
 <h2>Edit Offers</h2>
 
@@ -172,7 +172,7 @@ if (isset($offer)):
 
     <h3>Edit Offer: <?= htmlspecialchars($offer['title']) ?></h3>
 
-    <form action="/Test_project/public/merchant/offers/edit?id=<?= $offer['offer_id'] ?>" method="POST">
+    <form action="/loyalty-program/public/merchant/offers/edit?id=<?= $offer['offer_id'] ?>" method="POST">
 
         <label>Title:</label>
         <input type="text" name="title" value="<?= htmlspecialchars($offer['title']) ?>" required>
@@ -209,7 +209,7 @@ if (isset($offer)):
                     Discount: <?= htmlspecialchars($offerItem["discount_value"]) ?>
                 </div>
 
-                <a class="edit-link" href="/Test_project/public/merchant/offers/edit?id=<?= $offerItem['offer_id'] ?>">
+                <a class="edit-link" href="/loyalty-program/public/merchant/offers/edit?id=<?= $offerItem['offer_id'] ?>">
                     Edit
                 </a>
 

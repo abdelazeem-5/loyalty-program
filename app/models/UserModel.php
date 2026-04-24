@@ -73,6 +73,7 @@ class UserModel
             return false;
         }
     }
+    
 public function updateCustomer(int $customerId, string $name, string $email, ?string $password = null): bool
 {
     if ($this->table !== 'customers') {

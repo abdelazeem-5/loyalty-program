@@ -69,12 +69,12 @@
         <h3>Admin Panel</h3>
         <hr style="border-color:#cfd9e6">
 
-        <a href="/Test_project/public/admins/dashboard">🏠 Dashboard</a>
-        <a href="/Test_project/public/admins/view_customers">👥 View Customers</a>
-        <a href="/Test_project/public/admins/view_merchants">🛒 View Merchants</a>
-        <a href="/Test_project/public/admins/view_subscriptions">📄 View Subscriptions</a>
-        <a href="/Test_project/public/admins/view_offers">📦 View Offers</a>
-        <a href="/Test_project/public/admins/login">🚪 Logout</a>
+        <a href="/loyalty-program/public/admins/dashboard">🏠 Dashboard</a>
+        <a href="/loyalty-program/public/admins/view_customers">👥 View Customers</a>
+        <a href="/loyalty-program/public/admins/view_merchants">🛒 View Merchants</a>
+        <a href="/loyalty-program/public/admins/view_subscriptions">📄 View Subscriptions</a>
+        <a href="/loyalty-program/public/admins/view_offers">📦 View Offers</a>
+        <a href="/loyalty-program/public">🚪 Logout</a>
     </div>
 
     <div class="col-9 content">

@@ -20,7 +20,7 @@ $router->add("/register-customer", fn() => (new UserController())->registerCusto
 $router->add("/register-merchant", fn() => (new UserController())->registerMerchant());
 $router->add("/login",             fn() => (new UserController())->login());
 $router->add("/logout",            fn() => (new UserController())->logout());
-$router->add("/register", function () { header("Location: /Test_project/public/select-user-type"); exit;});
+$router->add("/register", function () { header("Location: /loyalty-program/public/select-user-type"); exit;});
 
 
 $router->add("/subscription/join", fn() => (new SubscriptionController())->join());
@@ -52,7 +52,6 @@ $router->add("/customer/confirm-redeem", function () { (new UserController())->c
 $router->add("/offers", fn() => (new UserController())->viewOffers());
 
 
-
 $router->add("/merchant/dashboard", fn() => (new MerchantController())->dashboard());
 $router->add("/merchant/offers", fn() => (new MerchantController())->offers());
 $router->add("/merchant/offers/create", fn() => (new MerchantController())->createOffer());
@@ -74,7 +73,7 @@ $router->add("/merchant/offers/delete", function () {
 
 
 $path = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
-$basePath = "/Test_project/public";
+$basePath = "/loyalty-program/public";
 
 if (stripos($path, $basePath) === 0) {
     $path = substr($path, strlen($basePath));

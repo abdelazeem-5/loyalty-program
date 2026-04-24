@@ -138,12 +138,12 @@ input, textarea, select, button {
 </head>
 <body>
 
-<a href="/Test_project/public/select-user-type" class="back-btn">← Back</a>
+<a href="/loyalty-program/public/select-user-type" class="back-btn">← Back</a>
 
 <h2>Merchant Registration</h2>
 <p class="subtitle">Create your merchant account to start offering deals</p>
 
-<form action="/Test_project/public/register-merchant" method="POST">
+<form action="/loyalty-program/public/register-merchant" method="POST">
     <input type="text" name="name" placeholder="Merchant Name" required>
     <input type="email" name="email" placeholder="Business Email" required>
     <input type="password" name="password" placeholder="Password" required>

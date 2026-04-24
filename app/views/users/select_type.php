@@ -141,7 +141,7 @@ button:hover {
 </head>
 <body>
 
-<a class="back-btn" href="/Test_project/public/">← Back to Home</a>
+<a class="back-btn" href="/loyalty-program/public/">← Back to Home</a>
 
 <h2>Select User Type</h2>
 

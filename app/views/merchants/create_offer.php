@@ -130,13 +130,13 @@
 
 <body>
 
-<a class="back-top-btn" href="/Test_project/public/merchant/dashboard">← Merchant Panel</a>
+<a class="back-top-btn" href="/loyalty-program/public/merchant/dashboard">← Merchant Panel</a>
 
 <div class="offer-box">
 
     <h2>Add New Offer</h2>
 
-    <form action="/Test_project/public/merchant/offers/create" method="POST">
+    <form action="/loyalty-program/public/merchant/offers/create" method="POST">
 
         <label>Offer Title:</label>
         <input type="text" name="title" placeholder="Offer Title" required>

@@ -139,12 +139,12 @@ input, textarea, select, button {
 
 <body>
 
-<a href="/Test_project/public/" class="back-btn">← Back to Home</a>
+<a href="/loyalty-program/public/" class="back-btn">← Back to Home</a>
 
 <div>
     <h2>Admin Login</h2>
 
-    <form action="/Test_project/public/admins/login" method="POST">
+    <form action="/loyalty-program/public/admins/login" method="POST">
         <input type="email" name="email" placeholder="Admin Email" required>
         <input type="password" name="password" placeholder="Password" required>
 

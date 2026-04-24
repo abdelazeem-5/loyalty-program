@@ -1,6 +1,6 @@
 <?php
 if (!isset($_SESSION["user"])) {
-    header("Location: /Test_project/public/login");
+    header("Location: /loyalty-program/public/login");
     exit;
 }
 ?>
@@ -117,12 +117,12 @@ body {
     <p><?= nl2br(htmlspecialchars($offer["description"])) ?></p>
     <p><b>Final Discount:</b> <?= $offer["final_discount"] ?>%</p>
 
-    <form action="/Test_project/public/customer/confirm-redeem" method="POST">
+    <form action="/loyalty-program/public/customer/confirm-redeem" method="POST">
         <input type="hidden" name="offer_id" value="<?= $offer["offer_id"] ?>">
         <button class="btn-confirm">Confirm Use</button>
     </form>
 
-    <a href="/Test_project/public/offers" class="btn-back">← Back to Offers</a>
+    <a href="/loyalty-program/public/offers" class="btn-back">← Back to Offers</a>
 
 </div>
 

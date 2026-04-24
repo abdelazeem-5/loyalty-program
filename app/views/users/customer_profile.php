@@ -154,14 +154,14 @@ input, textarea, select, button {
 </head>
 <body>
 
-<a href="/Test_project/public/customer/dashboard" class="back-btn">← Customer Panel</a>
+<a href="/loyalty-program/public/customer/dashboard" class="back-btn">← Customer Panel</a>
 
 <?php $customer = $_SESSION["user"]; ?>
 
 <h2>Edit Profile</h2>
 <p class="subtitle">Update your personal information</p>
 
-<form action="/Test_project/public/customer/profile" method="POST">
+<form action="/loyalty-program/public/customer/profile" method="POST">
 
     <label>Name:</label>
     <input type="text" name="name"

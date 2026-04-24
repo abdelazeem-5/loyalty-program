@@ -16,7 +16,7 @@ class SubscriptionController
     {
         if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'customer') {
 
-            header("Location: /Test_project/public/login");
+            header("Location: /loyalty-program/public/login");
             exit;
         }
 
@@ -38,16 +38,16 @@ class SubscriptionController
             if ($success) {
 
                 if ($program_type === 'points_based') {
-                    header("Location: /Test_project/public/subscription/points");
+                    header("Location: /loyalty-program/public/subscription/points");
                     exit;
                 }
 
                 if ($program_type === 'value_based') {
-                    header("Location: /Test_project/public/subscription/value");
+                    header("Location: /loyalty-program/public/subscription/value");
                     exit;
                 }
 
-                header("Location: /Test_project/public/");
+                header("Location: /loyalty-program/public/");
                 exit;
 
             } else {
@@ -101,13 +101,13 @@ class SubscriptionController
         if ($existing) {
             $model->updateSubscription($existing["subscription_id"], $tier, $programType);
 
-            header("Location: /Test_project/public/subscription/updated");
+            header("Location: /loyalty-program/public/subscription/updated");
             exit;
         }
 
         $model->createSubscription($customerId, $tier, $programType);
 
-        header("Location: /Test_project/public/subscription/created");
+        header("Location: /loyalty-program/public/subscription/created");
         exit;
     }
 

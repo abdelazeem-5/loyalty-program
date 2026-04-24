@@ -26,7 +26,7 @@ class AdminController
 
                 $_SESSION['admin'] = $admin;
 
-                header("Location: /Test_project/public/admins/dashboard");
+                header("Location: /loyalty-program/public/admins/dashboard");
                 exit;
             }
 
@@ -40,7 +40,7 @@ class AdminController
     public function dashboard()
     {
         if (!isset($_SESSION['admin'])) {
-            header("Location: /Test_project/public/admins/login");
+            header("Location: /loyalty-program/public/admins/login");
             exit;
         }
 
@@ -99,7 +99,7 @@ class AdminController
     public function getAllOffers()
     {
         if (!isset($_SESSION['admin'])) {
-            header("Location: /Test_project/public/admins/login");
+            header("Location: /loyalty-program/public/admins/login");
             exit;
         }
 
@@ -116,7 +116,7 @@ class AdminController
     public function deleteCustomer()
 {
     if (!isset($_SESSION['admin'])) {
-        header("Location: /Test_project/public/admins/login");
+        header("Location: /loyalty-program/public/admins/login");
         exit;
     }
 
@@ -132,7 +132,7 @@ class AdminController
     $userModel = new UserModel("customer");
     $userModel->deleteCustomer($id);
 
-    header("Location: /Test_project/public/admins/view_customers");
+    header("Location: /loyalty-program/public/admins/view_customers");
     exit;
 }
 
@@ -140,7 +140,7 @@ class AdminController
     public function deleteMerchant()
 {
     if (!isset($_SESSION['admin'])) {
-        header("Location: /Test_project/public/admins/login");
+        header("Location: /loyalty-program/public/admins/login");
         exit;
     }
 
@@ -156,7 +156,7 @@ class AdminController
     $userModel = new UserModel("merchant");
     $userModel->deleteMerchant($id);
 
-    header("Location: /Test_project/public/admins/view_merchants");
+    header("Location: /loyalty-program/public/admins/view_merchants");
     exit;
 }
 
@@ -164,7 +164,7 @@ class AdminController
     public function deleteOffer()
     {
         if (!isset($_SESSION['admin'])) {
-            header("Location: /Test_project/public/admins/login");
+            header("Location: /loyalty-program/public/admins/login");
             exit;
         }
 
@@ -176,7 +176,7 @@ class AdminController
         $model = new OfferModel();
         $model->deleteOffer($id);
 
-        header("Location: /Test_project/public/admins/view_offers");
+        header("Location: /loyalty-program/public/admins/view_offers");
         exit;
     }
 
@@ -184,7 +184,7 @@ class AdminController
     public function deleteSubscription()
     {
         if (!isset($_SESSION['admin'])) {
-            header("Location: /Test_project/public/admins/login");
+            header("Location: /loyalty-program/public/admins/login");
             exit;
         }
 
@@ -196,10 +196,9 @@ class AdminController
         $model = new SubscriptionModel();
         $model->deleteSubscription($id);
 
-        header("Location: /Test_project/public/admins/view_subscriptions");
+        header("Location: /loyalty-program/public/admins/view_subscriptions");
         exit;
     } 
-
 
     public function logout()
     {
@@ -207,7 +206,7 @@ class AdminController
         $_SESSION = [];
         session_destroy();
 
-        header("Location: /Test_project/public/admins/login");
+        header("Location: /loyalty-program/public/admins/login");
         exit;
     }
 }
